@@ -43,7 +43,7 @@ The agent leverages **Google Gemini + LangChain + Streamlit** to simulate a real
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
+git clone https://github.com/Soumyajit-io/AI-sales-agent
 ```
 ### 2️⃣ Create and activate virtual environment
 ```bash
@@ -58,7 +58,6 @@ pip install -r requirements.txt
 Create a .env file in the root directory and add:
 ```bash
 GOOGLE_API_KEY=your_google_api_key_here
-
 ```
 ### 5️⃣ Run the app
 ```bash
@@ -90,3 +89,10 @@ I can shortlist a few options that fit your budget and style.”
  ┣ 📄 README.md             # Project documentation
  ┗ 📁 assets/               # (Optional) Images or future extensions
  ```
+
+## 🌟 Future Enhancements
+
+- Integration with Digital Twin module for body type & preference learning
+- Real-time inventory lookup & checkout
+- Voice interface for immersive sales experience
+- Analytics dashboard for conversion insights
