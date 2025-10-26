@@ -15,6 +15,11 @@ This project introduces an **AI Sales Agent** that helps customers discover and 
 
 The agent leverages **Google Gemini + LangChain + Streamlit** to simulate a real sales associate — understanding user intent, suggesting relevant products, and building trust using ethical sales psychology.
 
+### 🧩 Chat Screenshot
+![Chat Screenshot](assets/chat_screenshot.png)
+*An example of our AI-driven conversational sales experience.*
+
+
 ---
 
 ## 💡 Core Features
@@ -63,7 +68,7 @@ GOOGLE_API_KEY=your_google_api_key_here
 ```bash
 streamlit run main.py
 ```
-
+---
 ## 🧠 System Prompt Summary
 The AI agent:
 - Greets the customer by name.
@@ -71,7 +76,7 @@ The AI agent:
 - Suggests 2–4 tailored options with benefits & social proof.
 - Confirms stock, price, and delivery before closing.
 - Never manipulates or deceives — builds trust to increase conversions naturally.
-
+---
 ## 🧭 Example Use Case
 
 >User: “Show me a blue dress under ₹800.”
@@ -89,10 +94,12 @@ I can shortlist a few options that fit your budget and style.”
  ┣ 📄 README.md             # Project documentation
  ┗ 📁 assets/               # (Optional) Images or future extensions
  ```
-
+---
 ## 🌟 Future Enhancements
 
 - Integration with Digital Twin module for body type & preference learning
 - Real-time inventory lookup & checkout
 - Voice interface for immersive sales experience
 - Analytics dashboard for conversion insights
+
+---
