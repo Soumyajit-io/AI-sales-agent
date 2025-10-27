@@ -17,6 +17,7 @@ The agent leverages **Google Gemini + LangChain + Streamlit** to simulate a real
 
 ### 🧩 Chat Screenshot
 ![Chat Screenshot](assets/chat_screenshot.png)
+
 *An example of our AI-driven conversational sales experience.*
 
 
