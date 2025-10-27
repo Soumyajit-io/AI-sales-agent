@@ -15,6 +15,8 @@ This project introduces an **AI Sales Agent** that helps customers discover and 
 
 The agent leverages **Google Gemini + LangChain + Streamlit** to simulate a real sales associate — understanding user intent, suggesting relevant products, and building trust using ethical sales psychology.
 
+>For demo video Visit: [LinkedIn](https://www.linkedin.com/posts/soumyajit-sadhukhan_ai-hackathon-retailinnovation-activity-7388593523966541824-6c6T?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFW_x-oBahdYOLbUlw_imHYmWpIgoCJfAO8)
+
 ### 🧩 Chat Screenshot
 ![Chat Screenshot](assets/chat_screenshot.png)
 
