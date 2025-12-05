@@ -50,7 +50,7 @@ user_input =st.chat_input("Type here ")
 if user_input : st.session_state['message_his'].append({'role':'user','content':user_input})
 for i in st.session_state['message_his']:
    with st.chat_message(i['role']):
-      st.text(i['content'])
+      st.markdown(i['content'])
 if 'chat_history' not in st.session_state:
    st.session_state['chat_history']=[SystemMessage(content=system_prompt.to_string())]
 
