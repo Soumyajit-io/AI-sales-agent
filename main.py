@@ -3,6 +3,11 @@ from langchain_core.messages import SystemMessage,HumanMessage,AIMessage
 from langchain_core.prompts import load_prompt
 from dotenv import load_dotenv
 import streamlit as st
+import qrcode
+import secrets
+import random
+from io import BytesIO
+
 import time
 load_dotenv()
 
@@ -19,6 +24,23 @@ system_prompt = template.invoke(
       'user_gender':u_gender
    }
 )
+
+
+# Sidebar content
+with st.sidebar:
+   
+   st.markdown("---")
+   st.markdown("### 📱 Generate QR Code")
+
+   if st.button("Generate QR for In-Store Experience"):   
+      # Generate a simple random 6-digit Twin ID
+      twin_id = f"DT-{random.randint(100000, 999999)}"
+      qr_img = qrcode.make(twin_id)
+      buf = BytesIO()
+      qr_img.save(buf)
+      st.image(buf.getvalue(), caption=f"Scan in-store — Twin ID: {twin_id}")
+
+
 # -----------------------
 st.header("AI Sales agent ")  
 
