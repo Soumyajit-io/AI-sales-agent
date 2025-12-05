@@ -4,7 +4,6 @@ from langchain_core.prompts import load_prompt
 from dotenv import load_dotenv
 import streamlit as st
 import qrcode
-import secrets
 import random
 from io import BytesIO
 
