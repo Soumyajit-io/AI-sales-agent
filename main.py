@@ -6,10 +6,10 @@ import streamlit as st
 import time
 load_dotenv()
 
-u_name="Soumyajit Sadhukhan"
-u_loc="Kolkata ,WEST BENGAL, INDIA"
-u_size="M"
-u_gender='Male'
+u_name=""
+u_loc=""
+u_size=""
+u_gender=''
 template = load_prompt('prompts.json')
 system_prompt = template.invoke(
    {
