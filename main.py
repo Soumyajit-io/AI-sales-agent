@@ -41,7 +41,7 @@ with st.sidebar:
 
 
 # -----------------------
-st.header("AI Sales agent ")  
+st.header("AI Sales Assistant")  
 
 if 'message_his' not in st.session_state:
    st.session_state['message_his']=[]
