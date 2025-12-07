@@ -29,7 +29,7 @@ system_prompt = template.invoke(
 with st.sidebar:
    
    st.markdown("---")
-   st.markdown("### 📱 Generate QR Code")
+   st.markdown("### Continue In-Store")
 
    if st.button("Generate QR for In-Store Experience"):   
       # Generate a simple random 6-digit Twin ID
