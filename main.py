@@ -6,7 +6,9 @@ import streamlit as st
 import qrcode
 import random
 from io import BytesIO
-
+st.set_page_config(page_title="AI Sales Assistant",
+                   page_icon="🤖",
+                   layout="wide")
 import time
 load_dotenv()
 
@@ -46,16 +48,28 @@ st.header("AI Sales Assistant")
 first_msg = "Hi! I’m your AI Sales Assistant. Tell me what you're looking for and I’ll help you find the perfect outfit."
 if 'message_his' not in st.session_state:
    st.session_state['message_his']=[{'role':'assistant','content':first_msg}]
-
-user_input =st.chat_input("Type here ")
-
+   time.sleep(1.3)
+   with st.chat_message('assistant'):
+      text = first_msg
+      typed=''
+      placeholder = st.empty()
+      for ch in text:
+         typed+=ch
+         placeholder.markdown(f"{typed}_")
+         time.sleep(0.03)
+      placeholder.markdown(f"{typed}")
+user_input =st.chat_input("Enter your message...")
 
 
 if user_input : st.session_state['message_his'].append({'role':'user','content':user_input})
 
-for i in st.session_state['message_his']:
-   with st.chat_message(i['role']):
-      st.markdown(i['content'])
+# Display
+if len(st.session_state['message_his']) == 1: pass
+else:  
+   for i in st.session_state['message_his']:
+      with st.chat_message(i['role']):
+         st.markdown(i['content'])
+
 if 'chat_history' not in st.session_state:
    st.session_state['chat_history']=[SystemMessage(content=system_prompt.to_string()),AIMessage(content= first_msg)]
 
@@ -63,7 +77,6 @@ if 'chat_history' not in st.session_state:
 model = ChatGoogleGenerativeAI(model='gemini-2.5-flash')
 
 if user_input:
-   
    
    st.session_state['chat_history'].append(HumanMessage(content= user_input))
    response = model.invoke(st.session_state['chat_history'])
