@@ -43,21 +43,27 @@ with st.sidebar:
 # -----------------------
 st.header("AI Sales Assistant")  
 
+first_msg = "Hi! I’m your AI Sales Assistant. Tell me what you're looking for and I’ll help you find the perfect outfit."
 if 'message_his' not in st.session_state:
-   st.session_state['message_his']=[]
+   st.session_state['message_his']=[{'role':'assistant','content':first_msg}]
 
 user_input =st.chat_input("Type here ")
+
+
+
 if user_input : st.session_state['message_his'].append({'role':'user','content':user_input})
+
 for i in st.session_state['message_his']:
    with st.chat_message(i['role']):
       st.markdown(i['content'])
 if 'chat_history' not in st.session_state:
-   st.session_state['chat_history']=[SystemMessage(content=system_prompt.to_string())]
+   st.session_state['chat_history']=[SystemMessage(content=system_prompt.to_string()),AIMessage(content= first_msg)]
 
 # ----------------------------------------
 model = ChatGoogleGenerativeAI(model='gemini-2.5-flash')
 
 if user_input:
+   
    
    st.session_state['chat_history'].append(HumanMessage(content= user_input))
    response = model.invoke(st.session_state['chat_history'])
