@@ -11,7 +11,7 @@ import time
 st.set_page_config(page_title="AI Sales Assistant",
                    page_icon="🤖",
                    layout="wide")
-st.markdown("## **AI Sales Assistant**")  
+st.markdown("## **AI Fashion Assistant**")  
 
 
 # -----------------Session states and User input-------------
