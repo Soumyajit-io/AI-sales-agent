@@ -6,6 +6,12 @@ import qrcode
 import random
 from io import BytesIO
 import time
+import uuid
+
+# --------------------Utility Function--------------------
+def genid():
+   threadid = uuid.uuid4() 
+   return threadid
 
 # -----------------Header------------------
 st.set_page_config(page_title="AI Sales Assistant",
@@ -15,6 +21,8 @@ st.markdown("## **AI Fashion Assistant**")
 
 
 # -----------------Session states and User input-------------
+if "thread_id" not in st.session_state:
+   st.session_state['thread_id']=genid()
 first_msg = "Welcome! I’m your AI Fashion Assistant. Share your occasion, style preference, or budget, and I’ll curate the right outfit for you."
 if 'message_his' not in st.session_state:
    st.session_state['message_his']=[{'role':'assistant','content':first_msg}]
@@ -71,7 +79,9 @@ with st.sidebar:
 
 
 # ---------------------------Main UI------------------------
-CONFIG = {'configurable':{'thread_id':"thread-1"}}
+CONFIG = {'configurable':{'thread_id': st.session_state["thread_id"]},"metadata": {
+            "thread_id": st.session_state["thread_id"]
+        }}
 if user_input:
    st.session_state['chat_history'].append(HumanMessage(content= user_input))
 
