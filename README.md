@@ -1,14 +1,5 @@
 # 🛍️ AI Conversational Sales Agent (Basic Prototype)
 
-
-> **Hackathon Project — ABFRL Retail Challenge 2025**  
-> 🧠 A next-generation, ethical, and intelligent **AI Sales Associate** that redefines retail interactions — blending **sales psychology, personalization, and conversational intelligence**.  
-> 💬 Designed to bridge **online and in-store shopping** into one seamless, human-like experience.  
-> 🚀 Built using **Google Gemini (for now), LangChain, and Streamlit** — showcasing the future of AI-driven commerce.
-
-
----
-
 ## 🚀 Overview
 
 This project introduces an **AI Sales Agent** that helps customers discover and buy products through natural, persuasive, and human-like conversations.
